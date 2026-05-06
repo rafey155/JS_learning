@@ -42,6 +42,33 @@ let sum = 45;
 console.log(!a)
 console.log(!b)
 console.log(!sum)
+// Bitwise operator
+
+// bitwise And
+let a = 6
+let b = 5
+console.log(a & b)
+
+// bitwise or
+let a = 5
+let b= 3
+console.log(5 | 3)
+
+// bitwise XOR
+console.log( a ^ b )
+
+// bitwise NOT 
+console.log(~a)
+
+// left shift 
+console.log( a << 2)
+
+// Right shift
+console.log(a >> 2)
+
+// ternary operator
+let myAge = 12;
+(myAge <= 18 ) ? (console.log("can vote")) : (console.log("can not vote"))
 
 
 
