@@ -46,4 +46,83 @@ for (const tea of teaType) {
 
 console.log(preferedTea)
 
-// 5.
+// 5.use a for in loop to loop through an object containing city population and stop the loop when the population of brelin is found and sotre the all preivious cities population in a new object named citypopulation the object is 
+// let citiesPopulation = {
+//     "london":890000,
+//     "Ny":8400000,
+//     "Paris":2200000,
+//     "Berlin":350000
+// }
+
+let citiesPopulation = {
+  london: 890000,
+  Ny: 8400000,
+  Paris: 2200000,
+  Berlin: 350000,
+};
+let cityNewpopulation ={}
+
+for (const cities in citiesPopulation) {
+    if(cities === "Berlin"){
+        break
+    }
+    cityNewpopulation[cities] = citiesPopulation[cities]
+}
+
+console.log(cityNewpopulation)
+
+// 6. use a for in loop to loop through an object containing city population skip any city with a population belllow 3 million and store rest in the new object largeCity => let worldCities = { sydnee : 500000, tokoyo : 9000000, Berlin : 3500000, paris : 22000000}
+
+let worldCities = {
+  sydnee: 500000,
+  tokoyo: 900000,
+  Berlin: 35000,
+  paris: 2200000,
+};
+let largeCities = {}
+for (const city in worldCities) {
+    if(worldCities[city] < 300000){ // here we use "object[key]" because we want to acces the value of the object. 
+        continue
+    }
+
+    largeCities[city] = worldCities[city]
+}
+
+console.log(largeCities)
+
+// 7. creta a for each loop that itrate through an array ["earl tea", "green tea", "chai", oolong tea] stop the loop when chai is found and store all the privious value in an array named availableTea.
+
+let myteaType = ["earl tea", "green tea", "chai", "oolong tea"]
+let availableTea = []
+myteaType.forEach((tea) =>{
+    if(tea === "chai"){
+        return
+    }
+    availableTea.push(tea)
+})
+console.log(availableTea)
+
+// 8. write a for each loop that ittrae thorough an array ["berlin", "sydene", "Tokoyo", "Paris"] skip sydene and store the rest of the elment in the new array traveled city.
+
+let favCity = ["berlin", "sydene", "Tokoyo", "Paris"];
+let traveledCity = []
+favCity.forEach((city) => {
+    if(city === "berlin"){
+        return
+    }
+    traveledCity.push(city)
+});
+
+console.log(traveledCity)
+
+// 9. write a for loop that itrate through an array [2,3,4,5] skip the value 4 and store the rest value with multiplied by 2 in a new array named doubledValue.
+let Numbers = [2,3,4,5]
+let doubledNumber = []
+for(let i = 0; i < Numbers.length; i++){
+    if(Numbers[i] === 4){
+        continue
+    }
+    doubledNumber.push(Numbers[i] * 2)
+}
+
+console.log(doubledNumber)
