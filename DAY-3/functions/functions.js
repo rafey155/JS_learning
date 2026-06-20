@@ -46,3 +46,20 @@ const teaMaker = createTeaMaker()
 console.log(teaMaker("green tea"))
 
 
+// 6. create a function thta find the factorial of a number 
+function findFact(n){
+    let fact = 1;
+    for(let i = 1; i<=n; i++){
+        fact *= i
+    }
+    return fact
+}
+
+// write a function that returns the length of a number 
+function findLen(num){
+    const str = num.toString()
+    return str.length
+}
+
+console.log(findLen(12345))
+
